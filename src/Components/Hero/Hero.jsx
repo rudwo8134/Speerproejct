@@ -3,6 +3,7 @@ import Data from './Herodata'
 import styled from 'styled-components'
 import staticcss from '../../Staticcss'
 import {FaArrowAltCircleRight, FaArrowAltCircleLeft} from 'react-icons/fa'
+import Button from '../util/Button'
 
 
 
@@ -149,6 +150,7 @@ const Hero = () => {
                   <SlidertextWrapper>
                     <SliderHeader>{source.Header}</SliderHeader>
                     <SlederSubtitle>{source.subHeader}</SlederSubtitle>
+                    <Button text={source.buttontext}/>
                   </SlidertextWrapper>
                 </>
               )}

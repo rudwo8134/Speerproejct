@@ -9,6 +9,7 @@ const Data = [
     subHeader:
       'Experience your favourite artists like never before and from the comfort of your own home.',
     img: image1,
+    buttontext: "Explore"
   },
   {
     alt: 'Hero image 2',
@@ -16,6 +17,7 @@ const Data = [
     subHeader:
       'Esit amet consectetur adipisicing elit. Eum reiciendis eos a possimus quia quasi impedit eaque fugit',
     img: image2,
+    buttontext: "Let's start"
   },
   {
     alt: 'Hero image 3',
@@ -23,6 +25,7 @@ const Data = [
     subHeader:
       'perspiciatis voluptates dolorum neque officia saepe facere hic!',
     img: image3,
+    buttontext: "Let's Go!"
   },
 ];
 

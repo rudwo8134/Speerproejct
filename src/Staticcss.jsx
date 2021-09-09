@@ -8,7 +8,7 @@ const staticcss = {
     HeroMain: "65px",
     HeroSub: "32px",
     Herobutton:"23px"
-
+    // 
   }
 }
 
