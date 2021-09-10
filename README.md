@@ -17,7 +17,7 @@
   1. add the interactive cursor
   2. add the play music function when user click the play and they can stop.
   3. add the button which response depends on cursor position in the element
-   
+### day2
   - Yellow Section
   1. add the background with circle use the absolute position. add the parallex effect on image
   2. add the background image reveal itself
