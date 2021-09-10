@@ -23,3 +23,7 @@
   2. add the background image reveal itself
   3. add the try it now button (same with Red section)
   4. add the see demobutton (same with Red section)
+   
+  - Perks section
+  1. add the button
+  2. add the Text contents

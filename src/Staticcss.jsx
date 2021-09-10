@@ -11,6 +11,8 @@ const staticcss = {
     Perksmodel1: '#D34848',
     Perksmodel2: '#1FE1E9',
     Perksmodel3: '#FFB33F',
+    // Reviw
+    ReviewBackground: '#1FE1E9',
   },
   fontSize: {
     // hero
@@ -27,7 +29,12 @@ const staticcss = {
     PerksmainHeader: '74px',
     PerksMaincontents: '51px',
     PerksSubcontents: '35px',
+    //reveiw
+    ReviewMainheader: '74px',
+    Reviewstar: '30px',
+    Reviewsubtitle: '35px',
+    Reviewtext: '35px',
   },
 };
 
-export default staticcss
+export default staticcss;
