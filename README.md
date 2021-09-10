@@ -19,4 +19,7 @@
   3. add the button which response depends on cursor position in the element
    
   - Yellow Section
-   
+  1. add the background with circle use the absolute position. add the parallex effect on image
+  2. add the background image reveal itself
+  3. add the try it now button (same with Red section)
+  4. add the see demobutton (same with Red section)

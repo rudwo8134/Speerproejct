@@ -13,9 +13,8 @@ const HoverBUtton = styled(Link)`
   border-radius: 100px;
   overflow: hidden;
   text-decoration: none;
+  text-transform: uppercase;
   span {
-    font-size: 20px;
-    text-transform: uppercase;
     position: relative;
     pointer-events: none;
   }
@@ -60,7 +59,7 @@ const HoverButton = ({ Text, fontcolor = '#f72359', background="#fff" }) => {
         backgroundColor: background,
       }}
     >
-      <span>{Text}</span>
+      <span style={{fontSize:"20px"}}>{Text}</span>
     </HoverBUtton>
   );
 };
