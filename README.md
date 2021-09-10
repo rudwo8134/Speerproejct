@@ -15,4 +15,8 @@
    
   - Red Section
   1. add the interactive cursor
+  2. add the play music function when user click the play and they can stop.
+  3. add the button which response depends on cursor position in the element
+   
+  - Yellow Section
    

@@ -6,6 +6,7 @@ import speaker1 from '../../Assets/speaker1.png'
 import speaker2 from '../../Assets/speaker2.png';
 import music from '../../Assets/music.mp3'
 import { Howl,Howler } from 'howler'
+import HoverButton from '../util/HoverButton';
 
 
 const RedWrapper = styled.div`
@@ -117,6 +118,9 @@ const [play,setplay] = useState(false);
         <TextContainer>
           <h1>SUPERIOR SOUND</h1>
           <span>Experience live versions of your favourite songs.</span>
+          <div style={{marginTop: "3rem"}}>
+            <HoverButton Text="See Demo"/>
+          </div>
         </TextContainer>
         <ImageContainer>
           <img src={speaker1} alt="speaer1" className="speacker1" />
