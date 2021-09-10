@@ -1,4 +1,4 @@
-import React,{ useState, useEffect } from 'react'
+import React,{ useState, useEffect,useRef } from 'react'
 import Data from './Herodata'
 import styled from 'styled-components'
 import staticcss from '../../Staticcss'
@@ -95,8 +95,26 @@ const Radiobutton = styled.div`
     background-color: #FCE2BA;
   }
 `;
+const MouseCursor = styled.div`
+  width: 60px;
+  height: 60px;
+  background-color: #fff;
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  transform: translate(-50%,-50%);
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+  transition-property: background,transform;
+
+`
+
 
 const Hero = () => {
+  const [cursorX,setCursorX] = useState()
+  const [cursorY, setCursorY] = useState();
+  const [cursorgrow, setcursorgrow] = useState(false)
   const [current,setCurrent] = useState(0)
   const length = Data.length
 
@@ -109,15 +127,22 @@ const Hero = () => {
   };
 
 
-  console.log(current)
 
 
   useEffect(()=>{
     const interval = setInterval(()=>{
       setCurrent(current === length-1 ? current + 1 : 0 );
     },10000)
+    document.addEventListener("mousemove",(e)=>{
+      const {clientX, clientY} =e;
+      setCursorX(clientX)
+      setCursorY(clientY)
+    })
+    
     return () => clearInterval(interval);
   },[])
+
+
     
 
   if(!Array.isArray(Data) || Data.length <= 0){
@@ -131,11 +156,26 @@ const Hero = () => {
   return (
     <HeroWrapper>
       <SliderWrapper>
-        <Leftbutton onClick={prevSlide} />
-        <RIghtbutton onClick={nextSlide} />
+        <Leftbutton
+          onClick={prevSlide}
+          onMouseEnter={() => setcursorgrow(true)}
+          onMouseLeave={() => setcursorgrow(false)}
+        />
+        <RIghtbutton
+          onClick={nextSlide}
+          onMouseEnter={() => setcursorgrow(true)}
+          onMouseLeave={() => setcursorgrow(false)}
+        />
         <Radiobuttonwrapeer>
           {Data.map((num, index) => (
-            <Radiobutton key={index} onClick={()=>setCurrent(index)}>{index+1}</Radiobutton>
+            <Radiobutton
+              key={index}
+              onClick={() => setCurrent(index)}
+              onMouseEnter={() => setcursorgrow(true)}
+              onMouseLeave={() => setcursorgrow(false)}
+            >
+              {index + 1}
+            </Radiobutton>
           ))}
         </Radiobuttonwrapeer>
         {Data.map((source, index) => {
@@ -147,10 +187,13 @@ const Hero = () => {
               {index === current && (
                 <>
                   <img src={source.img} alt={source.alt} />
-                  <SlidertextWrapper>
+                  <SlidertextWrapper
+                    onMouseEnter={() => setcursorgrow(true)}
+                    onMouseLeave={() => setcursorgrow(false)}
+                  >
                     <SliderHeader>{source.Header}</SliderHeader>
                     <SlederSubtitle>{source.subHeader}</SlederSubtitle>
-                    <Button text={source.buttontext}/>
+                    <Button text={source.buttontext} />
                   </SlidertextWrapper>
                 </>
               )}
@@ -158,6 +201,15 @@ const Hero = () => {
           );
         })}
       </SliderWrapper>
+      <MouseCursor
+        cursorgrow={cursorgrow}
+        style={{
+          top: cursorY + 'px',
+          left: cursorX + 'px',
+          transform: cursorgrow ? 'scale(1.5)' : ' ',
+          background: cursorgrow ? 'blue' : ' ',
+        }}
+      />
     </HeroWrapper>
   );
 }
