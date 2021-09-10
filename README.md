@@ -27,3 +27,10 @@
   - Perks section
   1. add the button
   2. add the Text contents
+   
+  - price page
+  1. add the Perks page which will change depends on props
+  2. add the price component to show the price.
+  
+  - Checkout page
+  1.

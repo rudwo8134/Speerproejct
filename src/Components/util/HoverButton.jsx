@@ -37,7 +37,7 @@ const HoverBUtton = styled(Link)`
   }
 `;
 
-const HoverButton = ({ Text, fontcolor = '#f72359', background="#fff" }) => {
+const HoverButton = ({ Text, fontcolor = '#f72359', background="#fff" ,price,Link="/" }) => {
   const [x, setx] = useState(0);
   const [y, sety] = useState(0);
 
@@ -50,7 +50,7 @@ const HoverButton = ({ Text, fontcolor = '#f72359', background="#fff" }) => {
 
   return (
     <HoverBUtton
-      to="/"
+      to={Link}
       onMouseMoveCapture={(e) => handlemove(e)}
       x={x}
       y={y}
@@ -59,7 +59,14 @@ const HoverButton = ({ Text, fontcolor = '#f72359', background="#fff" }) => {
         backgroundColor: background,
       }}
     >
-      <span style={{fontSize:"20px"}}>{Text}</span>
+      <span
+        style={{
+          fontSize: price ? '26px' : '20px',
+          fontWeight: price ? 'bold' : 'normal',
+        }}
+      >
+        {Text}
+      </span>
     </HoverBUtton>
   );
 };

@@ -18,6 +18,12 @@ const staticcss = {
     //download
     downloadbackground: '#191919',
     downloadHeader: '#D34848',
+
+    //  Price Page.... Price
+    Pricebackground:'#191919',
+    PriceColor1: '#D24848',
+    PriceColor2: '#FFB33F',
+    PriceColor3: '#1FE1E9',
   },
   fontSize: {
     // hero
@@ -40,9 +46,15 @@ const staticcss = {
     Reviewsubtitle: '35px',
     Reviewtext: '35px',
     // download
-    downloadHeaderfont: "74px",
-    downloadsubfont:"51px"
-
+    downloadHeaderfont: '74px',
+    downloadsubfont: '51px',
+    // Pricing price
+    PriceMainHead: '49px',
+    PriceMainsub: '30px',
+    Priceboxmain: '20px',
+    Priceboxsub: '35px',
+    Priceboxprice: '85px',
+    Priceboxlist: '22px',
   },
 };
 
