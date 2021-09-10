@@ -193,7 +193,7 @@ const Hero = () => {
                   >
                     <SliderHeader>{source.Header}</SliderHeader>
                     <SlederSubtitle>{source.subHeader}</SlederSubtitle>
-                    <Button text={source.buttontext} />
+                    <Button text={source.buttontext}/>
                   </SlidertextWrapper>
                 </>
               )}

@@ -1,11 +1,11 @@
 const NavData = [
   {
-    name: 'about',
-    Link: '/about',
+    name: 'Home',
+    Link: '/',
   },
   {
-    name: 'Red',
-    Link: '/red',
+    name: 'Price',
+    Link: '/pricing',
   },
   {
     name: 'Yellow',

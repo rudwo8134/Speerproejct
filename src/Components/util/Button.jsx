@@ -56,9 +56,9 @@ const Buttonlink = styled(Link)`
     transition: all 0.5s ease-in-out;
   }
 `;
-const Button = ({text,big}) => {
+const Button = ({text,big,Link="/pricing"}) => {
   return (
-      <Buttonlink big={big}>{text}</Buttonlink>
+      <Buttonlink to={Link} big={big}>{text}</Buttonlink>
   );
 }
 

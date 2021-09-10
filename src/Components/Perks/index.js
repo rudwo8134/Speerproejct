@@ -12,11 +12,12 @@ const PekrsWrapper = styled.div`
   bottom: 0;
   margin: auto;
   width: 100vw;
-  height: 100vh;
+  height: ${({ Price }) => (Price ? '65vh' : '100vh')};
   background: #1d1f20;
   text-align: center;
   overflow: hidden;
-  background-color: ${staticcss.color.PerksBackground};
+  background-color: ${({ Price }) =>
+    Price ? '#D34848' : `${staticcss.color.PerksBackground}`};
 `;
 const Buttoncontainer = styled.div`
   position: absolute;
@@ -25,7 +26,7 @@ const Buttoncontainer = styled.div`
 `;
 const ContentsWrapper = styled.div`
   max-width: 1300px;
-  height: 100vh;
+  height: ${({ Price }) => (Price ? '65vh' : '100%')};
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -35,11 +36,13 @@ const ContentsWrapper = styled.div`
 `;
 
 const ContentMainHeader = styled.h1`
-  font-size: ${staticcss.fontSize.PerksmainHeader};
   text-transform: uppercase;
   text-align: start;
   color: white;
-  margin-bottom: 5rem;
+  margin-bottom: ${({ Price }) =>
+    Price ? '40px' : `5rem`};
+  font-size: ${({ Price }) =>
+    Price ? '50px' : `${staticcss.fontSize.PerksmainHeader}`}; 
 `;
 
 const TextWrapper =styled.div`
@@ -51,7 +54,8 @@ const TextWrapper =styled.div`
 const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin-right: 2rem;
+  margin-right: ${({ Price }) => (Price ? '12rem' : `2rem`)};
+  margin-bottom: ${({ Price }) => (Price ? '5rem' : `2rem`)};
 `;
 
 const Line = styled.div`
@@ -68,7 +72,6 @@ const Line = styled.div`
 `;
 
 const TextHead = styled.h1`
-  font-size: ${staticcss.fontSize.PerksMaincontents};
   color: ${({ id }) =>
     id === 1
       ? `${staticcss.color.Perksmodel1}`
@@ -80,40 +83,58 @@ const TextHead = styled.h1`
   text-align: start;
   font-weight: bold;
   width: 300px;
-  
+  font-size: ${({ Price }) =>
+    Price ? '45px' : `${staticcss.fontSize.PerksMaincontents}`}; ;;
 `;
 const Textcontents = styled.span`
   font-size: ${staticcss.fontSize.PerksSubcontents};
   text-align: start;
   font-weight: 500;
   color: white;
-  width: 450px;
+  width: ${({ Price }) =>
+    Price ? '300px' : `450px`};
+  font-size: ${({ Price }) =>
+    Price ? '28px' : `${staticcss.fontSize.PerksSubcontents}`};
 `;
 
 
-const Perks = () => {
+const Perks = ({Price}) => {
   return (
-    <PekrsWrapper>
-      <Buttoncontainer>
-        <Button text="TRT IT NOW" />
-      </Buttoncontainer>
+    <PekrsWrapper Price={Price}>
+      {Price ? (
+        ''
+      ) : (
+        <Buttoncontainer>
+          <Button text="TRT IT NOW" />
+        </Buttoncontainer>
+      )}
       <ContentsWrapper>
-        <ContentMainHeader>{Perksdata.main}</ContentMainHeader>
+        <ContentMainHeader Price={Price}>{Perksdata.main}</ContentMainHeader>
         <TextWrapper>
-          {Perksdata.sublist.map((data)=>{
-            return(
-              <TextContainer key={data.id}>
-                <Line id={data.id}/>
-                <TextHead id={data.id}>{data.subname}</TextHead>
-                <Textcontents>{data.text}</Textcontents>
+          {Perksdata.sublist.map((data) => {
+            return (
+              <TextContainer Price={Price} key={data.id}>
+                <Line
+                  id={data.id}
+                  style={{ borderBottom: Price && '3px solid white' }}
+                />
+                <TextHead
+                  Price={Price}
+                  id={data.id}
+                  style={{ color: Price && 'white' }}
+                >
+                  {data.subname}
+                </TextHead>
+                <Textcontents style={{ color: Price && 'black' }} Price={Price}>
+                  {data.text}
+                </Textcontents>
               </TextContainer>
-            )
+            );
           })}
         </TextWrapper>
       </ContentsWrapper>
-     
     </PekrsWrapper>
-  )
+  );
 }
 
 export default Perks
