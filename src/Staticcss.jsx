@@ -13,6 +13,11 @@ const staticcss = {
     Perksmodel3: '#FFB33F',
     // Reviw
     ReviewBackground: '#1FE1E9',
+    // Footer
+    footerBacgkround: '#5E33D1',
+    //download
+    downloadbackground: '#191919',
+    downloadHeader: '#D34848',
   },
   fontSize: {
     // hero
@@ -34,6 +39,10 @@ const staticcss = {
     Reviewstar: '30px',
     Reviewsubtitle: '35px',
     Reviewtext: '35px',
+    // download
+    downloadHeaderfont: "74px",
+    downloadsubfont:"51px"
+
   },
 };
 

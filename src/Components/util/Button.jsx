@@ -13,13 +13,13 @@ const mix = keyframes`
 `;
 
 const Buttonlink = styled(Link)`
-  width: 200px;
-  height: 60px;
+  width: ${({ big }) => (big ? '300px' : '200px')};
+  height: ${({ big }) => (big ? '100px' : '60px')};
   position: absolute;
   text-align: center;
   line-height: 60px;
   color: #fff;
-  font-size: 1.3rem;
+  font-size: ${({ big }) => (big ? '2.3rem' : '1.3rem')};
   font-weight: bold;
   text-transform: uppercase;
   text-decoration: none;
@@ -29,6 +29,10 @@ const Buttonlink = styled(Link)`
   animation: ${mix} 8s linear infinite;
   transition: all 1s ease-in-out;
   z-index: 3;
+  display: ${({ big }) => (big ? 'flex' : '')};
+  align-items: ${({ big }) => (big ? 'center' : '')};
+  justify-content: ${({ big }) => (big ? 'center' : '')};
+
   :hover {
     transition: all 0.5s ease-in-out;
     animation: none;
@@ -52,9 +56,9 @@ const Buttonlink = styled(Link)`
     transition: all 0.5s ease-in-out;
   }
 `;
-const Button = ({text}) => {
+const Button = ({text,big}) => {
   return (
-      <Buttonlink>{text}</Buttonlink>
+      <Buttonlink big={big}>{text}</Buttonlink>
   );
 }
 

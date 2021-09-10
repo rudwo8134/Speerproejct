@@ -1,4 +1,5 @@
 import React from 'react'
+import Download from '../Components/Download'
 import Hero from '../Components/Hero/Hero'
 import Perks from '../Components/Perks'
 import Redsection from '../Components/Red'
@@ -13,6 +14,7 @@ const Home = () => {
      <Yellow/>
     <Perks/>
     <Review/>
+    <Download/>
     </>
   )
 }
