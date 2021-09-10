@@ -6,6 +6,11 @@ const staticcss = {
     RedBackground: '#D34848',
     //yellow
     YellowBackground: '#FFB33F',
+    // Perks
+    PerksBackground: '#191919',
+    Perksmodel1: '#D34848',
+    Perksmodel2: '#1FE1E9',
+    Perksmodel3: '#FFB33F',
   },
   fontSize: {
     // hero
@@ -15,9 +20,13 @@ const staticcss = {
     // red
     RedMian: '72px',
     RedSub: '51px',
-    // 
-    YellowMain: "69px",
-    YellowSub:"48px",
+    // yellow
+    YellowMain: '69px',
+    YellowSub: '48px',
+    // Perks
+    PerksmainHeader: '74px',
+    PerksMaincontents: '51px',
+    PerksSubcontents: '35px',
   },
 };
 
