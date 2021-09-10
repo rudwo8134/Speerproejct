@@ -8,7 +8,9 @@ function App() {
       <Router>
         <Layout>
           <Switch>
-            <Route exact path="/" render={() => <Home />} />
+            <Route exact path="/"  >
+              <Home/>
+            </Route>
           </Switch>
         </Layout>
       </Router>
