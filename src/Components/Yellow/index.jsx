@@ -74,18 +74,7 @@ const Imagecontainer4 = styled.div`
   background-size: cover;
   border-radius: 50%;
 `;
-const Imagecontainer5 = styled.div`
-  z-index: 5;
-  top: 15%;
-  right: 20%;
-  position: absolute;
-  width: 20em;
-  height: 20em;
-  background: url(${image}) 50% 50% no-repeat fixed;
-  background-position: -5em -2em;
-  background-size: cover;
-  border-radius: 50%;
-`;
+
 const TextContainer = styled.div`
   position: absolute;
   z-index: 99;

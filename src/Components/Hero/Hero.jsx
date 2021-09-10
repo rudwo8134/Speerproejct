@@ -1,4 +1,4 @@
-import React,{ useState, useEffect,useRef } from 'react'
+import React,{ useState, useEffect } from 'react'
 import Data from './Herodata'
 import styled from 'styled-components'
 import staticcss from '../../Staticcss'

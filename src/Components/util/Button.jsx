@@ -1,5 +1,4 @@
 import React from 'react'
-import staticcss from '../../Staticcss'
 import styled,{keyframes} from 'styled-components'
 import { Link } from 'react-router-dom/cjs/react-router-dom.min'
 
