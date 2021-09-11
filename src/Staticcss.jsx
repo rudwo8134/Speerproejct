@@ -20,10 +20,14 @@ const staticcss = {
     downloadHeader: '#D34848',
 
     //  Price Page.... Price
-    Pricebackground:'#191919',
+    Pricebackground: '#191919',
     PriceColor1: '#D24848',
     PriceColor2: '#FFB33F',
     PriceColor3: '#1FE1E9',
+    // Paymentpage
+    PaymentColor1: '#D24848',
+    PaymentColor2: '#FFB33F',
+    PaymentColor3: '#1FE1E9',
   },
   fontSize: {
     // hero
@@ -55,6 +59,12 @@ const staticcss = {
     Priceboxsub: '35px',
     Priceboxprice: '85px',
     Priceboxlist: '22px',
+    // Payment
+    PaymentMainhead: '44px',
+    Paymentselecthead: '30px',
+    Paymentselectoption: '20px',
+    Paymentlabel:"13px",
+    Paymentpolicy:"14px"
   },
 };
 

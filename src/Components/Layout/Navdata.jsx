@@ -8,8 +8,8 @@ const NavData = [
     Link: '/pricing',
   },
   {
-    name: 'Yellow',
-    Link: '/yellow',
+    name: 'Payment',
+    Link: '/payment',
   },
 ];
 

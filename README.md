@@ -32,5 +32,16 @@
   1. add the Perks page which will change depends on props
   2. add the price component to show the price.
   
-  - Checkout page
-  1.
+  - payment page
+  1. add the payment pages. 
+  2. add the select button with div trick.
+  3. make billing information
+  ----------------------------
+  I didn't update the function. not enough time to do.
+
+
+### Contact information
+ -  Build by Eric.shin
+ -  Contact Phone:647-530-8134 
+ -  Contact Email:rudwo8134@gmail.com
+ -  
