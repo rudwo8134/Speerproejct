@@ -1,6 +1,10 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
+
+// redux
+import { connect } from 'react-redux';
+import { selectoption } from '../../Redux/Paymnet/Payment.Action';
 
 
 const HoverBUtton = styled(Link)`
@@ -37,9 +41,18 @@ const HoverBUtton = styled(Link)`
   }
 `;
 
-const HoverButton = ({ Text, fontcolor = '#f72359', background="#fff" ,price,Link="/" }) => {
+const HoverButton = ({
+  Text,
+  fontcolor = '#f72359',
+  background = '#fff',
+  price,
+  Link = '/',
+  select,
+  selectopt,
+}) => {
   const [x, setx] = useState(0);
   const [y, sety] = useState(0);
+
 
   const handlemove = (e) => {
     var x = e.clientX - e.target.offsetLeft;
@@ -48,27 +61,42 @@ const HoverButton = ({ Text, fontcolor = '#f72359', background="#fff" ,price,Lin
     sety(y);
   };
 
-  return (
-    <HoverBUtton
-      to={Link}
-      onMouseMoveCapture={(e) => handlemove(e)}
-      x={x}
-      y={y}
-      style={{
-        color: fontcolor,
-        backgroundColor: background,
-      }}
-    >
-      <span
+  const clickhandler = () =>{
+    if(select){
+      selectopt(select);
+    }
+    else{
+      return;
+    }
+  
+  }
+    return (
+      <HoverBUtton
+        onClick={()=>clickhandler()}
+        to={Link}
+        onMouseMoveCapture={(e) => handlemove(e)}
+        x={x}
+        y={y}
         style={{
-          fontSize: price ? '26px' : '20px',
-          fontWeight: price ? 'bold' : 'normal',
+          color: fontcolor,
+          backgroundColor: background,
         }}
       >
-        {Text}
-      </span>
-    </HoverBUtton>
-  );
+        <span
+          style={{
+            fontSize: price ? '26px' : '20px',
+            fontWeight: price ? 'bold' : 'normal',
+          }}
+        >
+          {Text}
+        </span>
+      </HoverBUtton>
+    );
 };
 
-export default HoverButton
+
+const mapDispatchtoProps = dispatch =>({
+  selectopt: (opt) => dispatch(selectoption(opt))
+})
+
+export default connect(null,mapDispatchtoProps)(HoverButton);

@@ -1,7 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import staticcss from '../../Staticcss'
 import Button from '../util/Button';
+
+// redux
+import { connect } from 'react-redux';
+import { selectoption } from '../../Redux/Paymnet/Payment.Action';
 
 const PaymentWrapper = styled.div`
   width: 100vw;
@@ -270,7 +274,11 @@ const PaymentWrapper = styled.div`
 `;
 
 
-const Paymentcomponent = () => {
+const Paymentcomponent = ({option,selectopt}) => {
+
+  const handlechange =(e)=>{
+    selectopt(e.target.value);
+  }
 
   return (
     <PaymentWrapper>
@@ -281,17 +289,35 @@ const Paymentcomponent = () => {
             <h2>1. Select your plan</h2>
             <div className="paymentoption">
               <label className="basic" id="basic">
-                <input type="radio" name="payment" value="basic" />
+                <input
+                  checked={option === 1 ? true : undefined}
+                  onChange={handlechange}
+                  type="radio"
+                  name="payment"
+                  value="1"
+                />
                 <div></div>
                 Basic
               </label>
               <label className="advanced" id="advanced">
-                <input type="radio" name="payment" value="advanced" />
+                <input
+                  onChange={handlechange}
+                  checked={option === 2 ? true : undefined}
+                  type="radio"
+                  name="payment"
+                  value="2"
+                />
                 <div></div>
                 advanced
               </label>
               <label className="pro" id="pro">
-                <input type="radio" name="payment" value="pro" />
+                <input
+                  onChange={handlechange}
+                  checked={option === 3 ? true : undefined}
+                  type="radio"
+                  name="payment"
+                  value="3"
+                />
                 <div></div>
                 pro
               </label>
@@ -348,7 +374,6 @@ const Paymentcomponent = () => {
                   <select>
                     {Array.from({ length: 30 }, (_, i) => i + 1).map(
                       (i, index) => {
-                        console.log(index);
                         return (
                           <option key={index} value={index + 2020}>
                             {index + 2020}
@@ -380,4 +405,8 @@ const Paymentcomponent = () => {
   );
 }
 
-export default Paymentcomponent
+const dispatchtoprops = dispatch =>({
+  selectopt: (opt) => dispatch(selectoption(opt))
+})
+
+export default connect(null, dispatchtoprops)(Paymentcomponent); 

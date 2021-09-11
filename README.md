@@ -6,6 +6,10 @@
   2. styled-components
   3. react-icons
   4. howler // to make web audio 
+  5. redux
+  6. redux-persist
+  7. redux-saga
+  8. reselect
 
 
 ### day1
@@ -44,4 +48,9 @@
  -  Build by Eric.shin
  -  Contact Phone:647-530-8134 
  -  Contact Email:rudwo8134@gmail.com
- -  
+
+
+
+--------------------------
+### extra
+ 1. add the redux and then state management. when they click the select button radio button will show what they select

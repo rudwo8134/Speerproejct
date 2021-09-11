@@ -4,6 +4,7 @@ const Pricedata = {
     ' Test out our app today! Choose from three subscription Based payment models.',
   Card: [
     {
+      select: 1,
       name: 'basic',
       length: 'monthly',
       price: 9,
@@ -17,6 +18,7 @@ const Pricedata = {
       ],
     },
     {
+      select: 2,
       name: 'Advanced',
       length: 'yearly',
       price: 99,
@@ -30,6 +32,7 @@ const Pricedata = {
       ],
     },
     {
+      select: 3,
       name: 'pro',
       length: 'yearly',
       price: 120,

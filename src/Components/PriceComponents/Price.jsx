@@ -7,6 +7,7 @@ import HoverButton from '../util/HoverButton';
 
 
 
+
 const PriceWrapper = styled.div`
   width: 100vw;
   height: 100vh;
@@ -133,6 +134,7 @@ const Price = () => {
                   })}
                 </ul>
                 <HoverButton
+                  select={data.select}
                   Text="Select"
                   Link="/payment"
                   price={true}
@@ -157,4 +159,6 @@ const Price = () => {
   )
 }
 
-export default Price
+
+
+export default Price;
