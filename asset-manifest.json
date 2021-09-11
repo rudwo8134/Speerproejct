@@ -1,27 +1,29 @@
 {
   "files": {
-    "main.css": "/Speerproejct/static/css/main.cb592059.chunk.css",
-    "main.js": "/Speerproejct/static/js/main.26e7ec37.chunk.js",
-    "main.js.map": "/Speerproejct/static/js/main.26e7ec37.chunk.js.map",
+    "main.css": "/Speerproejct/static/css/main.7c3ae992.chunk.css",
+    "main.js": "/Speerproejct/static/js/main.c77b9c70.chunk.js",
+    "main.js.map": "/Speerproejct/static/js/main.c77b9c70.chunk.js.map",
     "runtime-main.js": "/Speerproejct/static/js/runtime-main.76196ee2.js",
     "runtime-main.js.map": "/Speerproejct/static/js/runtime-main.76196ee2.js.map",
-    "static/js/2.f76f58dd.chunk.js": "/Speerproejct/static/js/2.f76f58dd.chunk.js",
-    "static/js/2.f76f58dd.chunk.js.map": "/Speerproejct/static/js/2.f76f58dd.chunk.js.map",
+    "static/js/2.42526be6.chunk.js": "/Speerproejct/static/js/2.42526be6.chunk.js",
+    "static/js/2.42526be6.chunk.js.map": "/Speerproejct/static/js/2.42526be6.chunk.js.map",
     "index.html": "/Speerproejct/index.html",
-    "static/css/main.cb592059.chunk.css.map": "/Speerproejct/static/css/main.cb592059.chunk.css.map",
-    "static/js/2.f76f58dd.chunk.js.LICENSE.txt": "/Speerproejct/static/js/2.f76f58dd.chunk.js.LICENSE.txt",
+    "static/css/main.7c3ae992.chunk.css.map": "/Speerproejct/static/css/main.7c3ae992.chunk.css.map",
+    "static/js/2.42526be6.chunk.js.LICENSE.txt": "/Speerproejct/static/js/2.42526be6.chunk.js.LICENSE.txt",
     "static/media/YellowBackground.b2a06985.png": "/Speerproejct/static/media/YellowBackground.b2a06985.png",
     "static/media/image1.2bc457f6.png": "/Speerproejct/static/media/image1.2bc457f6.png",
     "static/media/image2.d6d96570.jpg": "/Speerproejct/static/media/image2.d6d96570.jpg",
     "static/media/image3.531d5db7.png": "/Speerproejct/static/media/image3.531d5db7.png",
     "static/media/music.64d2308a.mp3": "/Speerproejct/static/media/music.64d2308a.mp3",
+    "static/media/smallspeaker1.ca0cdbbe.png": "/Speerproejct/static/media/smallspeaker1.ca0cdbbe.png",
+    "static/media/smallspeaker2.3ad0319d.png": "/Speerproejct/static/media/smallspeaker2.3ad0319d.png",
     "static/media/speaker1.289ca2ec.png": "/Speerproejct/static/media/speaker1.289ca2ec.png",
     "static/media/speaker2.767dc0a6.png": "/Speerproejct/static/media/speaker2.767dc0a6.png"
   },
   "entrypoints": [
     "static/js/runtime-main.76196ee2.js",
-    "static/js/2.f76f58dd.chunk.js",
-    "static/css/main.cb592059.chunk.css",
-    "static/js/main.26e7ec37.chunk.js"
+    "static/js/2.42526be6.chunk.js",
+    "static/css/main.7c3ae992.chunk.css",
+    "static/js/main.c77b9c70.chunk.js"
   ]
 }
