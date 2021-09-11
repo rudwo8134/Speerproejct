@@ -94,18 +94,18 @@ const Redsection = () => {
 const [play,setplay] = useState(false);
 
  function playSound(src) {
-    // if(!play){
-    //   var sound = new Howl({
-    //     src,
-    //   });
-    //   sound.play()
-    // }else{
-    //   Howler.stop();
-    // }
+    if(!play){
+      var sound = new Howl({
+        src,
+      });
+      sound.play()
+    }else{
+      Howler.stop();
+    }
  }
 
 
-  // Howler.volume(1.0);
+  Howler.volume(1.0);
 
 
   return (
