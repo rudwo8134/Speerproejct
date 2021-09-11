@@ -5,7 +5,6 @@ import Button from '../util/Button';
 import speaker1 from '../../Assets/smallspeaker1.png'
 import speaker2 from '../../Assets/smallspeaker2.png';
 import reviewdata from './reviewdata';
-import {BsFillStarFill} from 'react-icons/bs'
 import Star from '../util/Star';
 
 const ReviewWrapper = styled.div`

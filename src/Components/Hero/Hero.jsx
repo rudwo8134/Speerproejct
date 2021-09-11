@@ -140,7 +140,7 @@ const Hero = () => {
     })
     
     return () => clearInterval(interval);
-  },[])
+  },[current,length])
 
 
     

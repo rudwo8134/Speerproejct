@@ -52,7 +52,7 @@ const Download = () => {
           <h3>{DownloadData.subhead}</h3>
         </div>
         <div className="button">
-          <Button text={DownloadData.Buttonlogo} big={true}/>
+          <Button text={DownloadData.Buttonlogo} big="true"/>
         </div>
       </ContentsWrapper>
     </DownloadWrapper>

@@ -104,7 +104,6 @@ const [play,setplay] = useState(false);
     }
  }
 
- console.log(play)
 
   Howler.volume(1.0);
 
