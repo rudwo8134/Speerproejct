@@ -271,7 +271,6 @@ const PaymentWrapper = styled.div`
 
 
 const Paymentcomponent = () => {
-  console.log(Array(10))
 
   return (
     <PaymentWrapper>
@@ -335,7 +334,6 @@ const Paymentcomponent = () => {
                   <select>
                     {Array.from({ length: 12 }, (_, i) => i + 1).map(
                       (i, index) => {
-                        console.log(index);
                         return (
                           <option key={index} value={index + 1}>
                             {index + 1}
