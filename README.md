@@ -38,7 +38,7 @@
   3. make billing information
   ----------------------------
   I didn't update the function. not enough time to do.
-
+  and also i didnt build mobile version. this website is for only desktop version(recomended 1920px-1080px)
 
 ### Contact information
  -  Build by Eric.shin
