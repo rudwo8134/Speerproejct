@@ -1,7 +1,6 @@
-import React from 'react'
+import React,{useState} from 'react'
 import styled,{keyframes} from 'styled-components'
 import { GiHamburgerMenu, GiCancel } from 'react-icons/gi';
-import { useState } from 'react/cjs/react.development'
 import NavData from './Navdata';
 import { Link } from 'react-router-dom';
 
