@@ -57,6 +57,10 @@ const staticcss = {
     Reviewstar: '30px',
     Reviewsubtitle: '35px',
     Reviewtext: '35px',
+    mobileReviewMainheader: '40px',
+    mobileReviewstar: '30px',
+    mobileReviewsubtitle: '25px',
+    mobileReviewtext: '20px',
     // download
     downloadHeaderfont: '74px',
     downloadsubfont: '51px',

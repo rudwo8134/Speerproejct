@@ -20,11 +20,18 @@ const ReviewWrapper = styled.div`
   text-align: center;
   overflow: hidden;
   background-color: ${staticcss.color.ReviewBackground};
+  @media screen and (max-width: 468px) {
+    height: unset;
+  }
 `;
 const Buttoncontainer = styled.div`
   position: absolute;
   top: 2rem;
   right: 14rem;
+  @media screen and (max-width: 468px) {
+   top:1.5rem;
+   right: 7rem;
+  }
 `;
 const Contetscontainer = styled.div`
   width: 1300px;
@@ -33,11 +40,21 @@ const Contetscontainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @media screen and (max-width: 468px) {
+    flex-direction: column;
+    height: unset;
+    justify-content: center;
+    align-items: unset;
+
+  }
 `;
 const Imagecontainer = styled.div`
   position: relative;
   width: 70%;
   height: 50%;
+  @media screen and (max-width: 468px) {
+    display:none;
+  }
   .small1 {
     position: absolute;
     top: 15rem;
@@ -59,34 +76,56 @@ const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin-left: 2rem;
+  @media screen and (max-width: 468px) {
+  }
 
-.header{
-  font-size: ${staticcss.fontSize.ReviewMainheader};
-  color:white;
-  text-transform: uppercase;
-  text-align: start;
-}
-`
+
+  .header {
+    font-size: ${staticcss.fontSize.ReviewMainheader};
+    color: white;
+    text-transform: uppercase;
+    text-align: start;
+    @media screen and (max-width: 468px) {
+      font-size: ${staticcss.fontSize.mobileReviewMainheader};
+      margin-top:5rem;
+    }
+  }
+`;
 const ReviecontentswWrapper = styled.div`
   display: flex;
   flex-direction: row;
+  @media screen and (max-width: 468px) {
+    flex-direction:column ;
+  }
 `;
 const ReviewContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  @media screen and (max-width: 468px) {
+    margin-bottom: 3rem;
+  }
+
   h3 {
     font-size: ${staticcss.fontSize.Reviewsubtitle};
     color: white;
     text-transform: uppercase;
     font-weight: 700;
+    @media screen and (max-width: 468px) {
+      font-size: ${staticcss.fontSize.mobileReviewsubtitle};
+    }
   }
   span {
     font-size: ${staticcss.fontSize.Reviewtext};
     text-transform: capitalize;
     font-weight: 300;
-    text-align:start;
+    text-align: start;
+    @media screen and (max-width: 468px) {
+      font-size: ${staticcss.fontSize.mobileReviewtext};
+      width: 80vw;
+      line-height: 1rem.5rem;
+    }
   }
 `;
 
