@@ -63,7 +63,7 @@ const TextContainer = styled.div`
     @media screen and (max-width: 468px) {
       font-size: ${staticcss.fontSize.mobileRedSub};
       text-align: center;
-      width: 100vw;
+      width: 90vw;
     }
   }
 `;

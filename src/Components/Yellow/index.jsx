@@ -19,12 +19,21 @@ const YellowWrapper = styled.div`
   text-align: center;
   overflow: hidden;
   background-color: ${staticcss.color.YellowBackground};
+  @media screen and (max-width: 468px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
 `;
 const Buttoncontainer = styled.div`
   position: absolute;
-  top:2rem;
+  top: 2rem;
   right: 14rem;
-`
+  @media screen and (max-width: 468px) {
+    top:1.5rem;
+    right:7rem;
+  }
+`;
 const Imagecontainer = styled.div`
   z-index: 5;
   top: 40%;
@@ -36,6 +45,13 @@ const Imagecontainer = styled.div`
   background-size: cover;
   background-position: -30em -10em;
   border-radius: 50%;
+  @media screen and (max-width: 468px) {
+    background-position: -18em -5em;
+    width: 200px;
+    height: 200px;
+    left: 1%;
+    top: 30%;
+  }
 `;
 const Imagecontainer2 = styled.div`
   z-index: 5;
@@ -46,9 +62,14 @@ const Imagecontainer2 = styled.div`
   width: 25em;
   height: 25em;
   background: url(${image}) 50% 50% no-repeat fixed;
-  background-position:  -30em -10em ;
+  background-position: -30em -10em;
   background-size: cover;
   border-radius: 50%;
+  @media screen and (max-width: 468px) {
+    background-position: -18em -5em;
+    width: 200px;
+    height: 200px;
+  }
 `;
 const Imagecontainer3 = styled.div`
   z-index: 5;
@@ -61,10 +82,17 @@ const Imagecontainer3 = styled.div`
   background-position: -30em -10em;
   background-size: cover;
   border-radius: 50%;
+  @media screen and (max-width: 468px) {
+    top: 35%;
+    left: 40%;
+    background-position: -18em -5em;
+    width: 100px;
+    height: 100px;
+  }
 `;
 const Imagecontainer4 = styled.div`
   z-index: 5;
-  bottom:-15%;
+  bottom: -15%;
   right: -10%;
   position: absolute;
   width: 30em;
@@ -73,6 +101,9 @@ const Imagecontainer4 = styled.div`
   background-position: 0rem -2rem;
   background-size: cover;
   border-radius: 50%;
+  @media screen and (max-width: 468px) {
+    display: none;
+  }
 `;
 
 const TextContainer = styled.div`
@@ -86,6 +117,10 @@ const TextContainer = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  @media screen and (max-width: 468px) {
+    width: 100vw;
+    margin-top: 3rem;
+  }
   ::before {
     content: '';
     z-index: 3;
@@ -98,6 +133,10 @@ const TextContainer = styled.div`
     background-position: 20em 2em;
     background-size: cover;
     border-radius: 50%;
+    @media screen and (max-width: 468px) {
+      display: none;
+      
+    }
   }
   h1 {
     z-index: 99;
@@ -106,6 +145,14 @@ const TextContainer = styled.div`
     color: white;
     font-weight: bold;
     margin: 0;
+    @media screen and (max-width: 468px) {
+      margin: 2rem auto;
+      text-align: center;
+      width: 90%;
+      font-size: ${staticcss.fontSize.mobileYellowMain};
+      margin-top:3rem
+      
+    }
   }
   h3 {
     z-index: 99;
@@ -115,6 +162,18 @@ const TextContainer = styled.div`
     color: #333333;
     text-align: start;
     margin: 2rem 0;
+    @media screen and (max-width: 468px) {
+      margin: 0 auto;
+      text-align: center;
+      width: 80%;
+      font-size: ${staticcss.fontSize.mobileYellowSub};
+    }
+  }
+`;
+const Buttoncontainer2 = styled.div`
+  @media screen and (max-width: 468px) {
+    width: 100vw;
+    margin-top: 2rem;
   }
 `;
 
@@ -133,7 +192,9 @@ const Yellow = () => {
       <TextContainer>
         <h1>FRONT ROW SEATS</h1>
         <h3>Experience concerts up close and personal.</h3>
-        <HoverButton Text="See Demo" fontcolor="#FFB33F" background="#fff" />
+        <Buttoncontainer2>
+          <HoverButton Text="See Demo" fontcolor="#FFB33F" background="#fff" />
+        </Buttoncontainer2>
       </TextContainer>
     </YellowWrapper>
   );

@@ -42,6 +42,8 @@ const staticcss = {
     // yellow
     YellowMain: '69px',
     YellowSub: '48px',
+    mobileYellowMain: '47px',
+    mobileYellowSub: '32px',
     // Perks
     PerksmainHeader: '74px',
     PerksMaincontents: '51px',
