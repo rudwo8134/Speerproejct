@@ -21,6 +21,11 @@ const NavWrapper = styled.div`
   top: 1rem;
   left: 2rem;
   transition: all 0.3s ease-in-out;
+
+  @media screen and (max-width: 468px) {
+    top: 0.5rem;
+    left: 1rem;
+  }
   .normal {
     position: fixed;
     margin: 0;
@@ -38,12 +43,21 @@ const NavWrapper = styled.div`
     transform: translate(-50%, -50%) scale(0);
     pointer-events: none;
     display: flex;
+    @media screen and (max-width: 468px) {
+      height: 30vh;
+      width: 40vw;
+      clip-path: circle(250px at 10% -10%);
+    }
   }
   .normal.open {
     opacity: 1;
     display: flex;
     transform: translate(0%, 0%) scale(1);
     pointer-events: all;
+    @media screen and (max-width: 468px) {
+      background: transparent;
+
+    }
     :before {
       content: '';
       position: absolute;
@@ -69,6 +83,10 @@ const Hamberger = styled(GiHamburgerMenu)`
   border-radius: 50%;
   background-color: white;
   padding: 0.5rem;
+
+  @media screen and (max-width:468px){
+    font-size: 1rem;
+  }
 `
 const Logotext = styled.h1`
   color: #ffffff;
@@ -77,21 +95,38 @@ const Logotext = styled.h1`
   letter-spacing: 3px;
   line-height: 30px;
   background-color: transparent;
-
+  @media screen and (max-width: 468px) {
+    font-size: 1.4rem;
+  }
 `;
 const NavLinks = styled.ul`
+  @media screen and (max-width: 468px) {
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: space-between;
+  }
   li {
     list-style: none;
     margin-top: 2rem;
+    @media screen and (max-width: 468px) {
+      margin-top: 1rem;
+    }
   }
 `;
 const Cancelbutton = styled(GiCancel)`
   position: absolute;
-  top:3rem;
+  top: 3rem;
   left: 2rem;
   font-size: 2.5rem;
   color: white;
-`
+  @media screen and (max-width: 468px) {
+    font-size: 1.5rem;
+    top: 1rem;
+    left: 1rem;
+  }
+`;
 const LinkComponent = styled(Link)`
   color: white;
   text-transform: capitalize;
@@ -99,6 +134,9 @@ const LinkComponent = styled(Link)`
   text-decoration: none;
   font-weight: bold;
   letter-spacing: 3px;
+  @media screen and (max-width: 468px) {
+    font-size: 1.2rem;
+  }
 `;
 const HomeLink =styled(Link)`
   text-decoration: none;

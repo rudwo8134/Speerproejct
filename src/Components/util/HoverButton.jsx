@@ -18,6 +18,7 @@ const HoverBUtton = styled(Link)`
   overflow: hidden;
   text-decoration: none;
   text-transform: uppercase;
+
   span {
     position: relative;
     pointer-events: none;

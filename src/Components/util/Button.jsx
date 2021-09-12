@@ -32,6 +32,15 @@ const Buttonlink = styled(Link)`
   display: ${({ big }) => (big ? 'flex' : '')};
   align-items: ${({ big }) => (big ? 'center' : '')};
   justify-content: ${({ big }) => (big ? 'center' : '')};
+  @media screen and (max-width: 468px) {
+    width: 100px;
+    height: 30px;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+  }
 
   :hover {
     transition: all 0.5s ease-in-out;
@@ -79,6 +88,7 @@ const NormalButton = styled.button`
   justify-content: ${({ big }) => (big ? 'center' : '')};
   border: none;
 
+ 
   :hover {
     transition: all 0.5s ease-in-out;
     animation: none;
@@ -88,6 +98,7 @@ const NormalButton = styled.button`
     }
   }
   :before {
+   
     content: '';
     position: absolute;
     top: -5px;

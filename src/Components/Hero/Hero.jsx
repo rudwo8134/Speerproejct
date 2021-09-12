@@ -13,7 +13,7 @@ const HeroWrapper = styled.div`
 `
 const SliderWrapper = styled.div`
   position: relative;
-  height: 100vh;
+  height: 101vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,28 +37,61 @@ const SlidertextWrapper = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  @media screen and (max-width: 468px) {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+  .buttoncontainer {
+    @media screen and (max-width: 468px){
+      margin-top:1rem;
+      width: 100vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
 `;
 const SliderHeader = styled.h1`
   font-size: ${staticcss.fontSize.HeroMain};
-  color:${staticcss.color.herotextcolor};
+  color: ${staticcss.color.herotextcolor};
   font-weight: bold;
-`
+  @media screen and (max-width: 468px) {
+    width: 90vw;
+    font-size: 2rem;
+    text-align:center;
+  }
+`;
 const SlederSubtitle = styled.h4`
   font-size: ${staticcss.fontSize.HeroSub};
   color: ${staticcss.color.herotextcolor};
   font-weight: 500;
+  @media screen and (max-width: 468px) {
+    width: 80vw;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
 `;
 
 const Leftbutton = styled(FaArrowAltCircleLeft)`
   position: absolute;
-  top:50%;
-  left:32px;
+  top: 50%;
+  left: 32px;
   font-size: 3rem;
-  color:white;
+  color: white;
   z-index: 10;
   cursor: pointer;
   user-select: none;
-`
+  @media screen and (max-width: 468px) {
+    font-size: 1.5rem;
+    top: unset;
+    bottom: 32px;
+  }
+`;
 const RIghtbutton = styled(FaArrowAltCircleRight)`
   position: absolute;
   top: 50%;
@@ -68,18 +101,24 @@ const RIghtbutton = styled(FaArrowAltCircleRight)`
   z-index: 10;
   cursor: pointer;
   user-select: none;
+  @media screen and (max-width: 468px) {
+    font-size: 1.5rem;
+    top: unset;
+    bottom: 32px;
+  }
 `;
 const Radiobuttonwrapeer = styled.div`
   margin: 0 auto;
   position: absolute;
-  bottom:32px;
+  bottom: 32px;
   left: 50%;
   transform: translateX(-60%);
   display: flex;
   align-items: center;
   z-index: 33;
   justify-content: space-between;
-`
+
+`;
 const Radiobutton = styled.div`
   width: 30px;
   height: 30px;
@@ -92,7 +131,13 @@ const Radiobutton = styled.div`
   font-size: 1rem;
   font-weight: bold;
   :hover {
-    background-color: #FCE2BA;
+    background-color: #fce2ba;
+  }
+  @media screen and (max-width: 468px) {
+    font-size: 0.6rem;
+    width: 30px;
+    height: 30px;
+    margin-left: 25px;
   }
 `;
 const MouseCursor = styled.div`
@@ -103,12 +148,14 @@ const MouseCursor = styled.div`
   border-radius: 50%;
   pointer-events: none;
   mix-blend-mode: difference;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   z-index: 1000;
   transition: all 0.3s ease-in-out;
-  transition-property: background,transform;
-
-`
+  transition-property: background, transform;
+  @media screen and (max-width: 468px) {
+    display: none;
+  }
+`;
 
 
 const Hero = () => {
@@ -193,7 +240,9 @@ const Hero = () => {
                   >
                     <SliderHeader>{source.Header}</SliderHeader>
                     <SlederSubtitle>{source.subHeader}</SlederSubtitle>
-                    <Button text={source.buttontext}/>
+                    <div className="buttoncontainer">
+                      <Button text={source.buttontext} />
+                    </div>
                   </SlidertextWrapper>
                 </>
               )}
