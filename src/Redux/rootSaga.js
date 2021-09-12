@@ -6,3 +6,5 @@ export default function* rootSaga(){
     call()
   ]
 }
+
+// I just add to add the function. if company need the other requirement such as save the data on database.

@@ -54,3 +54,5 @@
 --------------------------
 ### extra
  1. add the redux and then state management. when they click the select button radio button will show what they select
+ 2. add the send message function to my email(rudwo8134@gmail.com) using by Formspree
+ - I add the redux-sage to make more function because company need to save the data to database.

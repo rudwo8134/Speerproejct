@@ -275,16 +275,37 @@ const PaymentWrapper = styled.div`
 
 
 const Paymentcomponent = ({option,selectopt}) => {
+  const [usercredit, setusercredit] = useState({
+    FullName: '',
+    BillingAddress: '',
+    City: '',
+    PostalCode: '',
+    Country: '',
+    CardholderName: '',
+    CardNumber: '',
+    ExpriryMonth: '',
+    ExpriryYear: '',
+    CVV: '',
+  });
+
 
   const handlechange =(e)=>{
     selectopt(e.target.value);
   }
 
+  const handleformchange= (e)=>{
+    const change = e.target.value;
+    const name = e.target.name;
+    setusercredit({...usercredit, [name]:change})
+  }
+
+
+
   return (
     <PaymentWrapper>
       <div className="wrapper">
         <h1 className="payment">Payment</h1>
-        <form>
+        <form action="https://formspree.io/f/xnqlwavg" method="POST">
           <div className="selectplan">
             <h2>1. Select your plan</h2>
             <div className="paymentoption">
@@ -327,22 +348,48 @@ const Paymentcomponent = ({option,selectopt}) => {
             <div className="billing">
               <h1>2. Billing Information</h1>
               <label>Full Name</label>
-              <input type="text" />
+              <input
+                type="text"
+                name="FullName"
+                onChange={handleformchange}
+                required
+              />
               <label>Billing address</label>
-              <input type="text" />
+              <input
+                type="text"
+                name="BillingAddress"
+                onChange={handleformchange}
+                required
+              />
               <div className="divider">
                 <div className="col">
                   <label>CIty</label>
-                  <input type="text" />
+                  <input
+                    type="text"
+                    name="City"
+                    onChange={handleformchange}
+                    required
+                  />
                 </div>
                 <div className="col">
                   <label>Postalcode</label>
-                  <input type="text" />
+                  <input
+                    type="text"
+                    name="PostalCode"
+                    onChange={handleformchange}
+                    required
+                  />
                 </div>
               </div>
 
               <label>Country</label>
-              <select>
+              <select
+                name="Country"
+                onChange={handleformchange}
+                defaultValue={{ value: '' }}
+                required
+              >
+                <option value="">Choose Here</option>
                 <option value="canada">Canada</option>
                 <option value="usa">USA</option>
               </select>
@@ -350,14 +397,30 @@ const Paymentcomponent = ({option,selectopt}) => {
             <div className="credit">
               <h1>3. Credit card Information</h1>
               <label>cardholder's name</label>
-              <input type="text" />
+              <input
+                type="text"
+                name="CardholderName"
+                onChange={handleformchange}
+                required
+              />
               <label>card number</label>
-              <input type="number" />
+              <input
+                type="number"
+                name="CardNumber"
+                onChange={handleformchange}
+                required
+              />
 
               <div className="divider">
                 <div className="col">
                   <label>expriry month</label>
-                  <select>
+                  <select
+                    name="ExpriryMonth"
+                    onChange={handleformchange}
+                    defaultValue={{ value: '' }}
+                    required
+                  >
+                    <option value="">Choose Here</option>
                     {Array.from({ length: 12 }, (_, i) => i + 1).map(
                       (i, index) => {
                         return (
@@ -371,9 +434,18 @@ const Paymentcomponent = ({option,selectopt}) => {
                 </div>
                 <div className="col">
                   <label>expriry year</label>
-                  <select>
+                  <select
+                    name="ExpriryYear"
+                    onChange={handleformchange}
+                    defaultValue={{ value: '' }}
+                    required
+                  >
+                    <option value="">Choose Here</option>
                     {Array.from({ length: 30 }, (_, i) => i + 1).map(
                       (i, index) => {
+                        <option hidden disabled value="dd">
+                          choose here
+                        </option>;
                         return (
                           <option key={index} value={index + 2020}>
                             {index + 2020}
@@ -386,7 +458,12 @@ const Paymentcomponent = ({option,selectopt}) => {
               </div>
 
               <label>cvv</label>
-              <input type="number" />
+              <input
+                type="number"
+                name="CVV"
+                onChange={handleformchange}
+                required
+              />
             </div>
           </div>
           <div className="policy">
@@ -397,7 +474,7 @@ const Paymentcomponent = ({option,selectopt}) => {
             </span>
           </div>
           <div className="buttoncontainer">
-            <Button text="download" />
+            <Button text="download" type="submit" />
           </div>
         </form>
       </div>
