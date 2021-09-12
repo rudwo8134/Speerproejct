@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Speerproejct/static/css/main.7c3ae992.chunk.css",
-    "main.js": "/Speerproejct/static/js/main.6c97ba9c.chunk.js",
-    "main.js.map": "/Speerproejct/static/js/main.6c97ba9c.chunk.js.map",
+    "main.css": "/Speerproejct/static/css/main.1fae89dd.chunk.css",
+    "main.js": "/Speerproejct/static/js/main.62eab147.chunk.js",
+    "main.js.map": "/Speerproejct/static/js/main.62eab147.chunk.js.map",
     "runtime-main.js": "/Speerproejct/static/js/runtime-main.76196ee2.js",
     "runtime-main.js.map": "/Speerproejct/static/js/runtime-main.76196ee2.js.map",
     "static/js/2.854e2a29.chunk.js": "/Speerproejct/static/js/2.854e2a29.chunk.js",
     "static/js/2.854e2a29.chunk.js.map": "/Speerproejct/static/js/2.854e2a29.chunk.js.map",
     "index.html": "/Speerproejct/index.html",
-    "static/css/main.7c3ae992.chunk.css.map": "/Speerproejct/static/css/main.7c3ae992.chunk.css.map",
+    "static/css/main.1fae89dd.chunk.css.map": "/Speerproejct/static/css/main.1fae89dd.chunk.css.map",
     "static/js/2.854e2a29.chunk.js.LICENSE.txt": "/Speerproejct/static/js/2.854e2a29.chunk.js.LICENSE.txt",
     "static/media/YellowBackground.b2a06985.png": "/Speerproejct/static/media/YellowBackground.b2a06985.png",
     "static/media/image1.2bc457f6.png": "/Speerproejct/static/media/image1.2bc457f6.png",
@@ -23,7 +23,7 @@
   "entrypoints": [
     "static/js/runtime-main.76196ee2.js",
     "static/js/2.854e2a29.chunk.js",
-    "static/css/main.7c3ae992.chunk.css",
-    "static/js/main.6c97ba9c.chunk.js"
+    "static/css/main.1fae89dd.chunk.css",
+    "static/js/main.62eab147.chunk.js"
   ]
 }
