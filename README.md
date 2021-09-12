@@ -62,3 +62,4 @@
  - finish the here page 
  - finish the red page
  - finish the yellow page
+ - finish the perk page

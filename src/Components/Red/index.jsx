@@ -12,9 +12,12 @@ import HoverButton from '../util/HoverButton';
 const RedWrapper = styled.div`
   position: relative;
   width: 100vw;
-  height:100vh;
+  height: 100vh;
   background-color: ${staticcss.color.RedBackground};
-`
+  @media screen and (max-width: 468px) {
+    height: unset;
+  }
+`;
 const Buttoncontainer = styled.div`
   position: absolute;
   top: 2rem;
@@ -35,6 +38,7 @@ const Contetscontainer = styled.div`
     flex-direction: column;
     justify-content: center;
     padding: 1rem;
+    height: unset;
   }
 `;
 const TextContainer = styled.div`
@@ -75,6 +79,7 @@ const ImageContainer = styled.div`
     width: 30vw;
     height: 30vh;
     margin-bottom: 3rem;
+    margin-top: 3rem;
   }
   .speacker1 {
     position: absolute;

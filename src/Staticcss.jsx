@@ -48,6 +48,10 @@ const staticcss = {
     PerksmainHeader: '74px',
     PerksMaincontents: '51px',
     PerksSubcontents: '35px',
+    mobilePerksmainHeader: '47px',
+    mobilePerksMaincontents: '31px',
+    mobilePerksSubcontents: '22px',
+
     //reveiw
     ReviewMainheader: '74px',
     Reviewstar: '30px',

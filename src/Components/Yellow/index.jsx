@@ -51,6 +51,7 @@ const Imagecontainer = styled.div`
     height: 200px;
     left: 1%;
     top: 30%;
+    background-attachment: fixed;
   }
 `;
 const Imagecontainer2 = styled.div`

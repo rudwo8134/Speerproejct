@@ -18,11 +18,18 @@ const PekrsWrapper = styled.div`
   overflow: hidden;
   background-color: ${({ Price }) =>
     Price ? '#D34848' : `${staticcss.color.PerksBackground}`};
+  @media screen and (max-width: 468px) {
+    height: unset;
+  }
 `;
 const Buttoncontainer = styled.div`
   position: absolute;
   top: 2rem;
   right: 14rem;
+  @media screen and (max-width: 468px) {
+    top:1rem;
+    right:7rem;
+  }
 `;
 const ContentsWrapper = styled.div`
   max-width: 1300px;
@@ -33,24 +40,31 @@ const ContentsWrapper = styled.div`
   justify-content: center;
   align-items: flex-start;
   padding: 3rem;
+  @media screen and (max-width: 468px) {
+    height: unset;
+  }
 `;
 
 const ContentMainHeader = styled.h1`
   text-transform: uppercase;
   text-align: start;
   color: white;
-  margin-bottom: ${({ Price }) =>
-    Price ? '40px' : `5rem`};
+  margin-bottom: ${({ Price }) => (Price ? '40px' : `5rem`)};
   font-size: ${({ Price }) =>
-    Price ? '50px' : `${staticcss.fontSize.PerksmainHeader}`}; 
+    Price ? '50px' : `${staticcss.fontSize.PerksmainHeader}`};
+  @media screen and (max-width: 468px) {
+    font-size: ${staticcss.fontSize.mobilePerksmainHeader};
+  }
 `;
 
-const TextWrapper =styled.div`
+const TextWrapper = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-
-`
+  @media screen and (max-width: 468px) {
+    flex-direction: column;
+  }
+`;
 const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -84,17 +98,24 @@ const TextHead = styled.h1`
   font-weight: bold;
   width: 300px;
   font-size: ${({ Price }) =>
-    Price ? '45px' : `${staticcss.fontSize.PerksMaincontents}`}; ;;
+    Price ? '45px' : `${staticcss.fontSize.PerksMaincontents}`};
+  @media screen and (max-width: 468px) {
+    font-size: ${staticcss.fontSize.mobilePerksMaincontents};
+    width: 80vw;
+  }
 `;
 const Textcontents = styled.span`
   font-size: ${staticcss.fontSize.PerksSubcontents};
   text-align: start;
   font-weight: 500;
   color: white;
-  width: ${({ Price }) =>
-    Price ? '300px' : `450px`};
+  width: ${({ Price }) => (Price ? '300px' : `450px`)};
   font-size: ${({ Price }) =>
     Price ? '28px' : `${staticcss.fontSize.PerksSubcontents}`};
+  @media screen and (max-width: 468px) {
+    font-size: ${staticcss.fontSize.mobilePerksSubcontents};
+    width: 70vw;
+  }
 `;
 
 
