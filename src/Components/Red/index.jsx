@@ -17,41 +17,84 @@ const RedWrapper = styled.div`
 `
 const Buttoncontainer = styled.div`
   position: absolute;
-  top:2rem;
+  top: 2rem;
   right: 14rem;
-`
+  @media screen and (max-width: 468px) {
+    top:1.5rem;
+    right: 7rem;
+  }
+`;
 const Contetscontainer = styled.div`
-  width: 1300px;
+  max-width: 1300px;
   height: 100vh;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-`
+  @media screen and (max-width: 468px) {
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+  }
+`;
 const TextContainer = styled.div`
+  @media screen and (max-width: 468px) {
+    width: 80vw;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  
+  }
   h1 {
     font-size: ${staticcss.fontSize.RedMian};
     color: white;
     font-weight: bold;
+    @media screen and (max-width: 468px) {
+      font-size: ${staticcss.fontSize.mobileRedMian};
+      text-align: center;
+      width: 100vw;
+      margin-top:3rem;
+    }
   }
   span {
     font-size: ${staticcss.fontSize.RedSub};
     font-weight: 500;
+    @media screen and (max-width: 468px) {
+      font-size: ${staticcss.fontSize.mobileRedSub};
+      text-align: center;
+      width: 100vw;
+    }
   }
 `;
 const ImageContainer = styled.div`
   position: relative;
   width: 700px;
   height: 500px;
+  @media screen and (max-width: 468px) {
+    width: 30vw;
+    height: 30vh;
+    margin-bottom: 3rem;
+  }
   .speacker1 {
     position: absolute;
     bottom: -3rem;
     right: 1rem;
+    @media screen and (max-width: 468px) {
+      width: 150px;
+      height: 150px;
+      bottom: -2.5rem;
+    }
   }
   .speacker2 {
     position: absolute;
-    top:3rem;
-    left:1rem;
+    top: 3rem;
+    left: 1rem;
+    @media screen and (max-width: 468px) {
+      width: 150px;
+      height: 150px;
+      top: 1.5rem;
+    }
   }
   img {
     width: 254px;
@@ -75,6 +118,13 @@ const Playbutton = styled.div`
   left: 50%;
   transform: translateX(-50%);
   transition: all 0.3s ease-in-out;
+  @media screen and (max-width: 468px) {
+    width: 15px;
+    height: 15px;
+    padding: 1rem;
+    font-size: 0.8rem;
+    bottom:1.5rem;
+  }
   :hover {
     background-image: linear-gradient(
       45deg,

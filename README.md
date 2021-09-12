@@ -60,3 +60,4 @@
  3. add the responsive design for mobile(max-width:468). they is no requirement. Therefore,working with my imagin style
  - finish the navbar
  - finish the here page 
+ - finish the red page

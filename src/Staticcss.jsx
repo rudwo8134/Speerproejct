@@ -37,6 +37,8 @@ const staticcss = {
     // red
     RedMian: '72px',
     RedSub: '51px',
+    mobileRedMian: '42px',
+    mobileRedSub: '30px',
     // yellow
     YellowMain: '69px',
     YellowSub: '48px',
@@ -63,8 +65,8 @@ const staticcss = {
     PaymentMainhead: '44px',
     Paymentselecthead: '30px',
     Paymentselectoption: '20px',
-    Paymentlabel:"13px",
-    Paymentpolicy:"14px"
+    Paymentlabel: '13px',
+    Paymentpolicy: '14px',
   },
 };
 

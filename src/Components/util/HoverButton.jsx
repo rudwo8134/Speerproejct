@@ -18,6 +18,9 @@ const HoverBUtton = styled(Link)`
   overflow: hidden;
   text-decoration: none;
   text-transform: uppercase;
+   @media screen and (max-width: 468px) {
+    padding: 0.3rem 0.9rem;
+   }
 
   span {
     position: relative;
