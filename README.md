@@ -70,4 +70,5 @@
 
 -------------------------------
 I didnt remove the function for mobile version yet. now, only working for only display.
-i will add the function soon. because i need to remove hover effect(sep,12)
+i will add the function soon. because i need to remove hover effect(sep,12).
+and also i need to add the design for tablet.

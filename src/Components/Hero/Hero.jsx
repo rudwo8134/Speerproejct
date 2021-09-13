@@ -179,8 +179,9 @@ const Hero = () => {
 
   useEffect(()=>{
     const interval = setInterval(()=>{
-      setCurrent(current === length-1 ? current + 1 : 0 );
+      setCurrent(current === length - 1 ? 0 : current + 1);
     },10000)
+    console.log(current)
     document.addEventListener("mousemove",(e)=>{
       const {clientX, clientY} =e;
       setCursorX(clientX)
