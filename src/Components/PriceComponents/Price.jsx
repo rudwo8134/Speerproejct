@@ -12,26 +12,50 @@ const PriceWrapper = styled.div`
   width: 100vw;
   height: 100vh;
   background-color: ${staticcss.color.Pricebackground};
+  @media screen and (max-width: 468px) {
+    height: unset;
+  }
 `;
-const ContentWrapper =styled.div`
+const ContentWrapper = styled.div`
   max-width: 1300px;
   height: 100vh;
-  margin:0 auto;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-`
+  @media screen and (max-width: 468px) {
+    height: unset;
+  }
+`;
 const Headercontents = styled.div`
+  @media screen and (max-width: 468px) {
+    width: 100vw;
+  }
   h1 {
     font-size: ${staticcss.fontSize.PriceMainHead};
-    color:white;
-    text-transform:uppercase;
+    color: white;
+    text-transform: uppercase;
+    @media screen and (max-width: 468px) {
+      font-size: ${staticcss.fontSize.mobilePriceMainHead};
+      margin-top: 5rem;
+      width: 100vw;
+      text-align: center;
+    }
   }
   span {
     font-size: ${staticcss.fontSize.PriceMainsub};
-    color:white;
+    color: white;
     font-weight: 300;
+    @media screen and (max-width: 468px) {
+      font-size: ${staticcss.fontSize.mobilePriceMainsub};
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align:center;
+      width: 90vw;
+      margin: 0 auto;
+    }
   }
 `;
 const Cardcontents = styled.div`
@@ -41,6 +65,10 @@ const Cardcontents = styled.div`
   width: 1000px;
   margin: 0 auto;
   margin-top: 3rem;
+  @media screen and (max-width: 468px) {
+    width: 100vw;
+    flex-direction: column;
+  }
 `;
 
 const CardContainer = styled.div`
@@ -49,6 +77,11 @@ const CardContainer = styled.div`
   justify-content: center;
 
   align-items: flex-start;
+  @media screen and (max-width: 468px) {
+    align-items: center;
+  }
+  button {
+  }
   .title {
     margin: 0;
     font-size: ${staticcss.fontSize.Priceboxmain};
@@ -107,6 +140,14 @@ const Musicicons = styled(BsMusicNoteBeamed)`
   color: white;
   margin-right: 1rem;
 `;
+const Buttoncontainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media screen and (max-width: 468px) {
+    margin-bottom:5rem;
+  }
+`;
 
 const Price = () => {
   return (
@@ -133,22 +174,24 @@ const Price = () => {
                     );
                   })}
                 </ul>
-                <HoverButton
-                  select={data.select}
-                  Text="Select"
-                  Link="/payment"
-                  price={true}
-                  fontcolor="white"
-                  background={
-                    data.name === 'basic'
-                      ? `${staticcss.color.PriceColor1}`
-                      : data.name === 'Advanced'
-                      ? `${staticcss.color.PriceColor2}`
-                      : data.name === 'pro'
-                      ? `${staticcss.color.PriceColor3}`
-                      : 'white'
-                  }
-                />
+                <Buttoncontainer>
+                  <HoverButton
+                    select={data.select}
+                    Text="Select"
+                    Link="/payment"
+                    price={true}
+                    fontcolor="white"
+                    background={
+                      data.name === 'basic'
+                        ? `${staticcss.color.PriceColor1}`
+                        : data.name === 'Advanced'
+                        ? `${staticcss.color.PriceColor2}`
+                        : data.name === 'pro'
+                        ? `${staticcss.color.PriceColor3}`
+                        : 'white'
+                    }
+                  />
+                </Buttoncontainer>
               </CardContainer>
             );
           })}

@@ -64,3 +64,5 @@
  - finish the yellow page
  - finish the perk page
  - finish the Review page. remove the image due to unmatch with graphic
+ - finish the Download, footer page.
+ - finish the price page 

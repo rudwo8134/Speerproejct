@@ -45,8 +45,9 @@ const SlidertextWrapper = styled.div`
     align-items: center;
   }
   .buttoncontainer {
-    @media screen and (max-width: 468px){
-      margin-top:1rem;
+
+    @media screen and (max-width: 468px) {
+      margin-top: 1rem;
       width: 100vw;
       display: flex;
       align-items: center;

@@ -73,6 +73,12 @@ const staticcss = {
     Priceboxsub: '35px',
     Priceboxprice: '85px',
     Priceboxlist: '22px',
+    mobilePriceMainHead: '43px',
+    mobilePriceMainsub: '24px',
+    mobilePriceboxmain: '20px',
+    mobilePriceboxsub: '35px',
+    mobilePriceboxprice: '85px',
+    mobilePriceboxlist: '22px',
     // Payment
     PaymentMainhead: '44px',
     Paymentselecthead: '30px',
