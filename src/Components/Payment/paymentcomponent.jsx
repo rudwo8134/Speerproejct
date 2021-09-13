@@ -11,10 +11,16 @@ const PaymentWrapper = styled.div`
   width: 100vw;
   height: 100vh;
   background-color: #eee;
+  @media screen and (max-width: 468px) {
+    height: unset;
+  }
   .wrapper {
     max-width: 1300px;
     margin: 0 auto;
     padding: 5rem 10rem 5rem 20rem;
+    @media screen and (max-width: 468px) {
+      padding: 2rem;
+    }
     .policy {
       margin-top: 3rem;
       span {
@@ -23,11 +29,19 @@ const PaymentWrapper = styled.div`
     }
     .buttoncontainer {
       margin-top: 2rem;
+      @media screen and (max-width: 468px) {
+        margin-bottom:10rem;
+      }
     }
   }
   .payment {
     font-size: ${staticcss.fontSize.PaymentMainhead};
     text-transform: uppercase;
+    @media screen and (max-width: 468px) {
+      font-size: ${staticcss.fontSize.mobilePaymentMainhead};
+      margin: 0;
+      margin-top: 3rem;
+    }
   }
   .Paycontainer {
     display: flex;
@@ -36,6 +50,13 @@ const PaymentWrapper = styled.div`
     justify-content: space-between;
     align-items: center;
     margin-top: 3rem;
+    @media screen and (max-width: 468px) {
+      margin-top: 1rem;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
 
     .billing {
       display: flex;
@@ -43,14 +64,23 @@ const PaymentWrapper = styled.div`
       h1 {
         font-size: ${staticcss.fontSize.Paymentselecthead};
         font-weight: 300;
+        @media screen and (max-width: 468px) {
+          font-size: ${staticcss.fontSize.mobilePaymentselecthead};
+        }
       }
       .divider {
         display: flex;
+        @media screen and (max-width: 468px) {
+          flex-direction: column;
+        }
         .col {
           display: flex;
           flex-direction: column;
           :last-child {
             margin-left: 8px;
+            @media screen and (max-width: 468px) {
+              margin-left: 0;
+            }
           }
           input {
             width: 155px;
@@ -64,6 +94,9 @@ const PaymentWrapper = styled.div`
         letter-spacing: 3px;
         margin-top: 1rem;
         margin-bottom: 5px;
+        @media screen and (max-width: 468px) {
+          font-size: ${staticcss.fontSize.mobilePaymentlabel};
+        }
       }
       input {
         width: 330px;
@@ -72,6 +105,10 @@ const PaymentWrapper = styled.div`
         border-radius: 3px;
         font-size: 24px;
         line-height: 24px;
+        @media screen and (max-width: 468px) {
+          width: 80vw;
+          font-size: 14px;
+        }
         &:active {
           color: #999;
           ::selection {
@@ -87,6 +124,9 @@ const PaymentWrapper = styled.div`
         width: 330px;
         height: 40px;
         border: 2px solid black;
+        @media screen and (max-width: 468px) {
+          width: 80vw;
+        }
       }
     }
     .credit {
@@ -95,6 +135,10 @@ const PaymentWrapper = styled.div`
       h1 {
         font-size: ${staticcss.fontSize.Paymentselecthead};
         font-weight: 300;
+        @media screen and (max-width: 468px) {
+          font-size: ${staticcss.fontSize.mobilePaymentselecthead};
+          margin-top: 5rem;
+        }
       }
       label {
         text-transform: uppercase;
@@ -103,14 +147,23 @@ const PaymentWrapper = styled.div`
         letter-spacing: 3px;
         margin-top: 1rem;
         margin-bottom: 5px;
+        @media screen and (max-width: 468px) {
+          font-size: ${staticcss.fontSize.mobilePaymentlabel};
+        }
       }
       .divider {
         display: flex;
+        @media screen and (max-width: 468px) {
+          flex-direction: column;
+        }
         .col {
           display: flex;
           flex-direction: column;
           :last-child {
             margin-left: 8px;
+            @media screen and (max-width: 468px) {
+              margin-left: 0;
+            }
           }
           select {
             width: 165px;
@@ -124,6 +177,10 @@ const PaymentWrapper = styled.div`
         border-radius: 3px;
         font-size: 24px;
         line-height: 24px;
+        @media screen and (max-width: 468px) {
+          width: 80vw;
+          font-size: 14px;
+        }
         &:active {
           color: #999;
           ::selection {
@@ -139,6 +196,9 @@ const PaymentWrapper = styled.div`
         width: 330px;
         height: 40px;
         border: 2px solid black;
+        @media screen and (max-width: 468px) {
+          width: 80vw;
+        }
         option {
           font-size: 24px;
         }
@@ -149,10 +209,18 @@ const PaymentWrapper = styled.div`
     h2 {
       font-size: ${staticcss.fontSize.Paymentselecthead};
       font-weight: 300;
+      @media screen and (max-width: 468px) {
+        font-size: ${staticcss.fontSize.mobilePaymentselecthead};
+      }
     }
     .paymentoption {
       display: flex;
       align-items: center;
+      @media screen and (max-width: 468px) {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+      }
 
       .basic {
         font-size: ${staticcss.fontSize.Paymentselectoption};
@@ -164,6 +232,10 @@ const PaymentWrapper = styled.div`
         align-items: center;
         cursor: pointer;
         margin-right: 30px;
+        @media screen and (max-width: 468px) {
+          font-size: ${staticcss.fontSize.mobilePaymentselectoption};
+          margin-bottom: 1rem;
+        }
         input {
           display: none;
           &:checked + div::after {
@@ -203,6 +275,10 @@ const PaymentWrapper = styled.div`
         align-items: center;
         cursor: pointer;
         margin-right: 30px;
+        @media screen and (max-width: 468px) {
+          font-size: ${staticcss.fontSize.mobilePaymentselectoption};
+          margin-bottom: 1rem;
+        }
         input {
           display: none;
           &:checked + div::after {
@@ -241,6 +317,10 @@ const PaymentWrapper = styled.div`
         align-items: center;
         cursor: pointer;
         margin-right: 10px;
+        @media screen and (max-width: 468px) {
+          font-size: ${staticcss.fontSize.mobilePaymentselectoption};
+          margin-bottom: 1rem;
+        }
         input {
           display: none;
           &:checked + div::after {

@@ -66,3 +66,8 @@
  - finish the Review page. remove the image due to unmatch with graphic
  - finish the Download, footer page.
  - finish the price page 
+ - finish the payment page
+
+-------------------------------
+I didnt remove the function for mobile version yet. now, only working for only display.
+i will add the function soon. because i need to remove hover effect(sep,12)

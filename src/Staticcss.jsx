@@ -37,17 +37,20 @@ const staticcss = {
     // red
     RedMian: '72px',
     RedSub: '51px',
+
     mobileRedMian: '42px',
     mobileRedSub: '30px',
     // yellow
     YellowMain: '69px',
     YellowSub: '48px',
+
     mobileYellowMain: '47px',
     mobileYellowSub: '32px',
     // Perks
     PerksmainHeader: '74px',
     PerksMaincontents: '51px',
     PerksSubcontents: '35px',
+
     mobilePerksmainHeader: '47px',
     mobilePerksMaincontents: '31px',
     mobilePerksSubcontents: '22px',
@@ -57,6 +60,7 @@ const staticcss = {
     Reviewstar: '30px',
     Reviewsubtitle: '35px',
     Reviewtext: '35px',
+
     mobileReviewMainheader: '40px',
     mobileReviewstar: '30px',
     mobileReviewsubtitle: '25px',
@@ -64,6 +68,7 @@ const staticcss = {
     // download
     downloadHeaderfont: '74px',
     downloadsubfont: '51px',
+
     mobiledownloadHeaderfont: '44px',
     mobiledownloadsubfont: '24px',
     // Pricing price
@@ -73,6 +78,7 @@ const staticcss = {
     Priceboxsub: '35px',
     Priceboxprice: '85px',
     Priceboxlist: '22px',
+
     mobilePriceMainHead: '43px',
     mobilePriceMainsub: '24px',
     mobilePriceboxmain: '20px',
@@ -85,6 +91,12 @@ const staticcss = {
     Paymentselectoption: '20px',
     Paymentlabel: '13px',
     Paymentpolicy: '14px',
+
+    mobilePaymentMainhead: '34px',
+    mobilePaymentselecthead: '20px',
+    mobilePaymentselectoption: '16px',
+    mobilePaymentlabel: '12px',
+    mobilePaymentpolicy: '14px',
   },
 };
 
