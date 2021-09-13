@@ -7,8 +7,11 @@ const Footerwrapeer = styled.footer`
   height: 35vh;
   width: 100vw;
   background: #5e33d1;
+  @media screen and (max-width: 468px) {
+    height: 30vh;
+  }
 `;
-const ContentsWrapper =styled.div`
+const ContentsWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,26 +19,37 @@ const ContentsWrapper =styled.div`
   max-width: 1300px;
   margin: 0 auto;
   height: 100%;
-  color:white;
-  h3{
+  color: white;
+  h3 {
     align-self: flex-start;
     display: flex;
     align-items: center;
     font-size: 24px;
     font-weight: 700;
+    @media screen and (max-width: 468px) {
+      font-size: 14px;
+      margin-left: 2rem;
+    }
   }
-  div{
-    margin-top:3rem;
+  div {
+    margin-top: 3rem;
     display: flex;
     align-items: center;
     flex-direction: column;
-    h1{
+    @media screen and (max-width: 468px) {
+      margin-top: 0rem;
+    }
+    h1 {
       font-size: 40px;
       font-weight: bold;
     }
-
+    span {
+      @media screen and (max-width: 468px) {
+        font-size: 10px;
+      }
+    }
   }
-`
+`;
 const EmailLogo = styled(MdEmail)`
   font-size: 2rem;
   margin-right: 1rem;

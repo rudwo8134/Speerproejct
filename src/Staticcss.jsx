@@ -64,6 +64,8 @@ const staticcss = {
     // download
     downloadHeaderfont: '74px',
     downloadsubfont: '51px',
+    mobiledownloadHeaderfont: '44px',
+    mobiledownloadsubfont: '24px',
     // Pricing price
     PriceMainHead: '49px',
     PriceMainsub: '30px',
